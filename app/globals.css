@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    :root {
+        --primary-color: #3BB77E;
+    }
+    .card {
+        @apply p-10 border rounded-xl w-full h-full shadow overflow-hidden border-transparent relative;
+    }
+
+    .categorie-card {
+        width: 170;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background-color: #f1f1f1;
+        @apply px-8 py-7 border rounded-xl shadow overflow-hidden border-transparent relative;
+    }
+
+    .product-card {
+        position: relative;
+        background-color: #fff;
+        border: 1px solid #ececec;
+        overflow: hidden;
+        margin-bottom: 30px;
+        @apply rounded-xl;
+    }
+    .product-card:hover .btn-dialog {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block !important;
+    }
+    
+    .card-detail-absolute {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .product-rate {
+        display: inline-block !important;
+        background-image: url('../public/rating-stars.png');
+        background-position: 0 -12px;
+        background-repeat: repeat-x;
+        height: 12px;
+        width: 60px;
+        transition: all 0.5s ease-out 0s;
+        -webkit-transition: all 0.5s ease-out 0s;
+    }
+
+    .product-rating {
+        height: 12px;
+        background-repeat: repeat-x;
+        background-image: url('../public/rating-stars.png');
+        background-position: 0 0;
+    }
+}

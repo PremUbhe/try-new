@@ -1,0 +1,15 @@
+{
+    "Categories": [
+        {
+            "id": 1,
+            "name": "Baking material",
+            "img": "_data/Categories/Baking-material.svg"
+        },
+        {
+            "id": 2,
+            "name": "Fast Foods",
+            "img": "_data/Categories/fast-food.svg"
+        }
+
+    ]
+}
