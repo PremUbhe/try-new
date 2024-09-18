@@ -13,10 +13,10 @@ export default async function CategoriesCard() {
     const CategorieData = await res.json();
 
   return (
-    <div className="flex flex-row gap-4 my-10">
-        {CategorieData.map((data: any, index: string)=>{
+    <div className="flex flex-row gap-4 ">
+        {CategorieData.map((data: any, index: any)=>{
             return(
-                <div className='categorie-card' key={index}>
+                <div className='categorie-card px-8 py-7 border rounded-xl shadow overflow-hidden border-transparent relative' key={index}>
                     <Image src={data.img} width={100} height={100} alt='Categorie Image'/>
                     <h3>{data.name}</h3>
                 </div>

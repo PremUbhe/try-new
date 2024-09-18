@@ -3,7 +3,10 @@ import { Quicksand } from "next/font/google"
 import './globals.css'
 import { cn } from "@/lib/utils"
 import { Metadata } from "next"
+
+// components
 import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -24,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: {children: React.ReactNode}) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning={true}>
       <head />
       <body
         className={cn(
@@ -34,6 +37,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
       >
         <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   )

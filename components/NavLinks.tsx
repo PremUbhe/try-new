@@ -1,7 +1,7 @@
 "use client";
 
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 // import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 
@@ -33,25 +33,24 @@ const links = [
 ];
 
 const NavLinks = () => {
-
-    const pathname = usePathname();
+  const pathname = usePathname();
 
   return (
-    <div className='flex gap-10'>
-        {links.map((link, index) => {
-            return (
-                <Link
-                    href={link.path}
-                    key={index}
-                    className={`${link.path === pathname && "text-primary"} 
+    <>
+      {links.map((link, index) => {
+        return (
+          <Link
+            href={link.path}
+            key={index}
+            className={`${link.path === pathname && "text-primary"} 
                         capitalize text-xs hover:text-primary`}
-                >
-                    {link.name}
-                </Link>
-            );
+          >
+            {link.name}
+          </Link>
+        );
       })}
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default NavLinks
+export default NavLinks;

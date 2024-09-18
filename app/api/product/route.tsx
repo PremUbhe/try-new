@@ -18,7 +18,7 @@ export async function GET() {
                 "brand": "NestFood",
                 "discount": 20,
                 "categories": "Snack",
-                "description": "lorem vns efcu eseued c waduIeS s audc",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et mollitia, harum pariatur vitae perspiciatis deserunt delectus doloremque. Officiis, numquam quae.",
                 "stock": 30,
             },
             {
@@ -30,7 +30,7 @@ export async function GET() {
                 "brand": "Stouffer",
                 "discount": 10,
                 "categories": "Hodo Foods",
-                "description": "lorem vns efcu eseued c waduIeS s audc",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et mollitia, harum pariatur vitae perspiciatis deserunt delectus doloremque. Officiis, numquam quae.",
                 "stock": 50,
             },
             {
@@ -42,7 +42,7 @@ export async function GET() {
                 "brand": "StarKist",
                 "discount": 25,
                 "categories": "Snack",
-                "description": "lorem vns efcu eseued c waduIeS s audc",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et mollitia, harum pariatur vitae perspiciatis deserunt delectus doloremque. Officiis, numquam quae.",
                 "stock": 75,
             },
             {
@@ -54,7 +54,7 @@ export async function GET() {
                 "brand": "NestFood",
                 "discount": 5,
                 "categories": "Vegetables",
-                "description": "lorem vns efcu eseued c waduIeS s audc",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et mollitia, harum pariatur vitae perspiciatis deserunt delectus doloremque. Officiis, numquam quae.",
                 "stock": 100,
             },
             {
@@ -66,7 +66,7 @@ export async function GET() {
                 "brand": "NestFood",
                 "discount": 14,
                 "categories": "Pet Foods",
-                "description": "lorem vns efcu eseued c waduIeS s audc",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et mollitia, harum pariatur vitae perspiciatis deserunt delectus doloremque. Officiis, numquam quae.",
                 "stock": 100,
             },
             {
@@ -78,7 +78,7 @@ export async function GET() {
                 "brand": "NestFood",
                 "discount": 10,
                 "categories": "Hodo Foods",
-                "description": "lorem vns efcu eseued c waduIeS s audc",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et mollitia, harum pariatur vitae perspiciatis deserunt delectus doloremque. Officiis, numquam quae.",
                 "stock": 100,
             },
         ]

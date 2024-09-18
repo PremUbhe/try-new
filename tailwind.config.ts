@@ -23,9 +23,11 @@ const config = {
       'primary': '#3BB77E',
       'primary-light': '#DEF9EC',
       'secondary': '#FDC040',
+      'light-blue': '#F4F6FA',
       'gray': '#ADADAD',
       'white': '#fff',
       'black': '#000',
+
     },
     fontSize: {
       sm: '0.8rem',
