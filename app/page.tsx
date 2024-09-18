@@ -79,13 +79,13 @@ const Home = async () => {
         <div className="container py-10">
           <h2 className='text-2xl font-medium mb-3'>Popular Products</h2>
           <div className="flex flex-wrap gap-3">
-            {ProductData.map((data: any, index: string)=>{
-              return(
-                <Suspense fallback={<p>...</p>}>
-                  <ProductCard key={index} products={data} />
-                </Suspense>
-              );
-            })}
+            <Suspense fallback={<p>...</p>}>
+              {ProductData.map((data: any, index: string)=>{
+                return(
+                    <ProductCard products={data} key={index} />
+                  );
+                })}
+            </Suspense>
           </div>
         </div>
       </section>
