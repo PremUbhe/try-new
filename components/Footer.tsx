@@ -32,7 +32,7 @@ const Footer = () => {
               needs from our shop
             </h1>
             <p className="mb-65 text-2xl text-gray">
-              Start You'r Daily Shopping with{" "}
+              Start You&apos;r Daily Shopping with 
               <span className="text-primary">Nest Mart</span>
             </p>
           </div>
