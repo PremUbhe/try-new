@@ -19,22 +19,33 @@ import loader from "@/public/section-loader.gif"
 
 
 const Home = async () => {
-  
-  const productsAPI = await fetch("http://localhost:3000/api/product", {
-    headers: {
+
+  let ProductData = null;
+  let Offers = null;
+
+  try {
+    const productsAPI = await fetch("http://localhost:3000/api/product", {
+      headers: {
+        Accept: "application/json",
+        method: "GET",
+        },
+    });
+    ProductData = await productsAPI.json();
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    const offerBanners = await fetch("http://localhost:3000/api/offerBanners", {
+      headers: {
       Accept: "application/json",
       method: "GET",
       },
-  });
-  const ProductData = await productsAPI.json();
-
-  const offerBanners = await fetch("http://localhost:3000/api/offerBanners", {
-    headers: {
-    Accept: "application/json",
-    method: "GET",
-    },
-  });
-  const Offers = await offerBanners.json();
+    });
+    Offers = await offerBanners.json();
+  } catch (error) {
+    console.log(error);
+  }
 
   return (
     <>

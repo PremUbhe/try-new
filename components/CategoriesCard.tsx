@@ -4,13 +4,19 @@ import Image from 'next/image'
 
 export default async function CategoriesCard() {
 
-    const res = await fetch("http://localhost:3000/api/categories", {
-        headers: {
-        Accept: "application/json",
-        method: "GET",
-        },
-    });
-    const CategorieData = await res.json();
+    let CategorieData = null;
+
+    try {
+        const res = await fetch("http://localhost:3000/api/categories", {
+            headers: {
+            Accept: "application/json",
+            method: "GET",
+            },
+        });
+        CategorieData = await res.json();
+    } catch (error) {
+        console.log(error);
+    }
 
   return (
     <div className="flex flex-row gap-4 ">
