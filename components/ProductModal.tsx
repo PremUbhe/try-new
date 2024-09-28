@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
 import { Thumbs } from "swiper/modules";
 import {
   Dialog,
@@ -25,10 +25,10 @@ import product4 from "@/data/Products/product-4-1.jpg";
 
 const images = [product1, product2, product3, product4];
 
-const ProductModal = ({ products }: { products: any }) => {
-  // store thumbs swiper instance
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+const ProductModal = ({ products }: { products: any }) => {
+
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass>();
   const [count, setCount] = useState(1);
 
   return (
