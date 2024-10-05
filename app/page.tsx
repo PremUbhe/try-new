@@ -94,7 +94,7 @@ const Home = async () => {
             <h2 className='text-2xl text-center font-medium mb-3'>Popular Products</h2>
               <Suspense fallback={<div className='w-full h-full flex justify-center'><Image src={loader} width={100} unoptimized alt='loading ...'></Image></div>}>
                 <div className="flex flex-wrap gap-3">
-                    {ProductData.map((data: any, index: string)=>{
+                    {ProductData.data.map((data: any, index: string)=>{
                       return(
                           <ProductCard products={data} key={index} />
                         );
