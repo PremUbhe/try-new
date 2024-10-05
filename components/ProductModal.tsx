@@ -14,6 +14,15 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
+// redux
+import {
+  increment,
+  decrement,
+  selectCount,
+  selectStatus,
+} from "@/lib/features/counter/counterSlice";
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+
 // icons
 import { FaCartShopping } from "react-icons/fa6";
 
@@ -25,11 +34,12 @@ import product4 from "@/data/Products/product-4-1.jpg";
 
 const images = [product1, product2, product3, product4];
 
-
 const ProductModal = ({ products }: { products: any }) => {
+  const dispatch = useAppDispatch();
+  const count = useAppSelector(selectCount);
+  const status = useAppSelector(selectStatus);
 
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass>();
-  const [count, setCount] = useState(1);
 
   return (
     <Dialog>
@@ -70,7 +80,7 @@ const ProductModal = ({ products }: { products: any }) => {
               >
                 {images.map((img, index) => {
                   return (
-                    <SwiperSlide key={index} >
+                    <SwiperSlide key={index}>
                       <div className="img-wrapper rounded-xl border border-gray aspect-[1/1]">
                         <Image
                           src={img}
@@ -97,11 +107,9 @@ const ProductModal = ({ products }: { products: any }) => {
               </h6>
               <div className="flex items-center gap-5">
                 <h4 className="text-5xl text-primary">
-                  $
-                  {(
-                    products.price -
-                    (products.price * products.discount) / 100
-                  ).toFixed(2)}{" "}
+                  ${(
+                    products.price - (products.price * products.discount) / 100
+                  ).toFixed(2)}
                 </h4>
                 <div className="">
                   <h6 className="text-base text-secondary">{`${products.discount}% Off`}</h6>
@@ -113,9 +121,21 @@ const ProductModal = ({ products }: { products: any }) => {
               <p>{products.description}</p>
 
               <div className="counter flex gap-4 my-2">
-                <button className="px-3 py-1 rounded bg-primary text-white" type="button" onClick={() => setCount(count + 1)}> + </button>
+                <button
+                  className="px-3 py-1 rounded bg-primary text-white"
+                  type="button"
+                  onClick={() => dispatch(increment())}
+                >
+                  +
+                </button>
                 <h6 className="text-base">{count}</h6>
-                <button className="px-3 py-1 rounded bg-primary text-white" type="button" onClick={() => count > 1 ? setCount(count - 1) : count }> - </button>
+                <button
+                  className="px-3 py-1 rounded bg-primary text-white"
+                  type="button"
+                  onClick={() => (count > 1 ? dispatch(decrement()) : count)}
+                >
+                  -
+                </button>
               </div>
             </div>
           </DialogDescription>

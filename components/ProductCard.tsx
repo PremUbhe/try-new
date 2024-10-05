@@ -14,7 +14,8 @@ export default function ProductCard({ products }: any) {
           <Image
             src={products.img}
             height={320}
-            placeholder="blur"
+            width={320}
+            // placeholder="blur"
             alt="product image"
           />
           <h6 className="text-gray text-sm">{products.categories}</h6>

@@ -1,12 +1,12 @@
-import { NextResponse } from "next/server"
+import { NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
-import { categories } from "@/lib/Model/categories";
+import { brands } from "@/lib/Model/brands";
 
 
 export async function GET() {
     try {
         await dbConnect();
-        const data = await categories.find();
+        const data = await brands.find();
 
         return NextResponse.json({ data, });
     } catch (error) {

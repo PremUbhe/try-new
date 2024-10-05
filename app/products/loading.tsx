@@ -6,7 +6,7 @@ import loader from '@/public/loading.gif'
 const loading = () => {
   return (
     <div className='absolute flex left-0 top-0 h-screen w-full items-center justify-center'>
-        <Image src={loader} alt='loading ...' />
+        <Image src={loader} alt='loading ...' unoptimized />
     </div>
   )
 }

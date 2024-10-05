@@ -8,9 +8,13 @@ export async function GET() {
     });
 }
 
-export async function POST(request: Request) {
-    const data = await request.json()
-    return NextResponse.json({
-        data,
-    });
-}
+// export async function POST(request: Request) {
+//     const data = await request.json()
+//     try {
+//         return NextResponse.json({
+//             data,
+//         });
+//     } catch (error) {
+//         return error
+//     }
+// }

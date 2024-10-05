@@ -17,35 +17,23 @@ import sliderTwo from "@/public/banner-1.png"
 import loader from "@/public/section-loader.gif"
 
 
-
 const Home = async () => {
-
-  let ProductData = null;
-  let Offers = null;
-
-  try {
-    const productsAPI = await fetch("http://localhost:3000/api/product", {
-      headers: {
-        Accept: "application/json",
-        method: "GET",
-        },
-    });
-    ProductData = await productsAPI.json();
-  } catch (error) {
-    console.log(error);
-  }
-
-  try {
-    const offerBanners = await fetch("http://localhost:3000/api/offerBanners", {
-      headers: {
+  
+  const productsAPI = await fetch("http://localhost:3000/api/product", {
+    headers: {
       Accept: "application/json",
       method: "GET",
       },
-    });
-    Offers = await offerBanners.json();
-  } catch (error) {
-    console.log(error);
-  }
+  });
+  const ProductData = await productsAPI.json();
+
+  const offerBanners = await fetch("http://localhost:3000/api/offerBanners", {
+    headers: {
+    Accept: "application/json",
+    method: "GET",
+    },
+  });
+  const Offers = await offerBanners.json();
 
   return (
     <>
@@ -94,7 +82,7 @@ const Home = async () => {
       <section className='categories pt-0'>
           <div className="container">
             <h2 className='text-2xl text-center font-medium mb-3'>Shop by Categories</h2>
-            <Suspense fallback={<div className='w-full h-full flex justify-center'><Image src={loader} width={100} alt='loading ...'></Image></div>}>
+            <Suspense fallback={<div className='w-full h-full flex justify-center'><Image src={loader} width={100} unoptimized alt='loading ...'></Image></div>}>
               <CategoriesCard />
             </Suspense>
           </div>
@@ -104,7 +92,7 @@ const Home = async () => {
       <section className='products'>
           <div className="container">
             <h2 className='text-2xl text-center font-medium mb-3'>Popular Products</h2>
-              <Suspense fallback={<div className='w-full h-full flex justify-center'><Image src={loader} width={100} alt='loading ...'></Image></div>}>
+              <Suspense fallback={<div className='w-full h-full flex justify-center'><Image src={loader} width={100} unoptimized alt='loading ...'></Image></div>}>
                 <div className="flex flex-wrap gap-3">
                     {ProductData.map((data: any, index: string)=>{
                       return(
