@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
 import { Products } from "@/lib/Model/products";
-import product from "@/app/products/[id]/page";
 
 
 // import product1 from "@/data/Products/product-1-1.jpg"
@@ -93,7 +92,7 @@ export async function GET() {
 
         const data = await Products.find();
 
-        return NextResponse.json( data );
+        return NextResponse.json({ data, });
 
     } catch (error) {
         return NextResponse.json("Error in Fetching try is:"+ error );
