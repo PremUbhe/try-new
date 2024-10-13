@@ -10,7 +10,7 @@ export default function ProductCard({ products }: any) {
   return (
     <>
       <div className="product-card w-80 p-7 rounded-xl hover:border-primary hover:shadow-lg">
-        <Link href={`/products/${products.id}`}>
+        <Link href={`/products/${products._id}`}>
           <Image
             src={products.img}
             height={320}
