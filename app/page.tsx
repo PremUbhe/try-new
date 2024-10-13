@@ -18,7 +18,7 @@ import loader from "@/public/section-loader.gif";
 
 const Home = async () => {
   const productsAPI = await fetch(
-    "https://nest-mart-git-main-premubhes-projects.vercel.app//api/product",
+    "https://nest-mart-git-main-premubhes-projects.vercel.app/api/product",
     {
       headers: {
         Accept: "application/json",
@@ -29,7 +29,7 @@ const Home = async () => {
   const ProductData = await productsAPI.json();
 
   const offerBanners = await fetch(
-    "https://nest-mart-git-main-premubhes-projects.vercel.app//api/offerBanners",
+    "https://nest-mart-git-main-premubhes-projects.vercel.app/api/offerBanners",
     {
       headers: {
         Accept: "application/json",
