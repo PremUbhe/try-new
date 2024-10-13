@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default async function CategoriesCard() {
 
-    const res = await fetch("http://localhost:3000/api/categories", {
+    const res = await fetch("https://nest-mart-rho.vercel.app/api/categories", {
         headers: {
         Accept: "application/json",
         method: "GET",

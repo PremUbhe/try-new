@@ -19,7 +19,7 @@ import loader from "@/public/section-loader.gif"
 
 const Home = async () => {
   
-  const productsAPI = await fetch("http://localhost:3000/api/product", {
+  const productsAPI = await fetch("https://nest-mart-rho.vercel.app/api/product", {
     headers: {
       Accept: "application/json",
       method: "GET",
@@ -27,7 +27,7 @@ const Home = async () => {
   });
   const ProductData = await productsAPI.json();
 
-  const offerBanners = await fetch("http://localhost:3000/api/offerBanners", {
+  const offerBanners = await fetch("https://nest-mart-rho.vercel.app/api/offerBanners", {
     headers: {
     Accept: "application/json",
     method: "GET",
