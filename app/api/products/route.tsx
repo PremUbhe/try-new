@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
 import { Products } from "@/lib/Model/products";
 
-
 // import product1 from "@/data/Products/product-1-1.jpg"
 // import product2 from "@/data/Products/product-2-1.jpg"
 // import product3 from "@/data/Products/product-3-1.jpg"
@@ -86,16 +85,16 @@ import { Products } from "@/lib/Model/products";
 // ]
 
 export async function GET() {
+  try {
+    await dbConnect();
 
-    try {
-        await dbConnect();
+    const data = await Products.find();
 
-        const data = await Products.find();
-
-        return NextResponse.json({ data, });
-
-    } catch (error) {
-        return NextResponse.json("Error in Fetching try is:"+ error );
-    }
-
+    return NextResponse.json({ data });
+  } catch (error: any) {
+    return NextResponse.json(
+      { error: "Error in Fetching: " + error.message },
+      { status: 500 }
+    );
+  }
 }

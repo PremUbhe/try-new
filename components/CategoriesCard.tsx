@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default async function CategoriesCard() {
   const res = await fetch(
-    "https://nest-mart-git-main-premubhes-projects.vercel.app/api/categories",
+    `${process.env.CURRENT_API_URL}/api/categories`,
     {
       headers: {
         Accept: "application/json",

@@ -26,9 +26,7 @@ export async function GET(req: Request, context: any) {
     }
 
     return NextResponse.json({ data });
-
   } catch (error: any) {
-    
     return NextResponse.json(
       { error: "Error in Fetching: " + error.message },
       { status: 500 }

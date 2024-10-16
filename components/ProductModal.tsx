@@ -37,7 +37,7 @@ const images = [product1, product2, product3, product4];
 const ProductModal = ({ products }: { products: any }) => {
   const dispatch = useAppDispatch();
   const count = useAppSelector(selectCount);
-  const status = useAppSelector(selectStatus);
+  
 
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass>();
 

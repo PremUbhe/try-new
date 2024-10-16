@@ -27,6 +27,7 @@ const config = {
       'gray': '#ADADAD',
       'white': '#fff',
       'black': '#000',
+      'border-color': "#ececec"
 
     },
     fontSize: {
